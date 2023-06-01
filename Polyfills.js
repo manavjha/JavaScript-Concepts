@@ -12,10 +12,10 @@ if(!String.prototype.includes){
             return true
            }
        }
-
        return false
     }
 }
+
 
 const sentence = "The quick brown fox jumps over the lazy dog"
 const word = sentence.includes("fox");

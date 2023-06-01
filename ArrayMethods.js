@@ -45,3 +45,12 @@ const SecondMax = (arr) => {
 
 console.log(SecondMax(numbers))
 console.log(SecondMax(numbers))
+
+const aa = [5,4,2,8,30,12]
+const v = aa.reduce( (accum,curr) => curr-1);
+v
+const xx = aa.find((x) => x ==8 )
+
+const bb = xx? xx:"error"
+bb
+

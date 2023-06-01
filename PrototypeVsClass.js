@@ -27,9 +27,11 @@ console.log(obj2)
 // ES6 Class base inheritance
 
 class PersonES6 {
+    #age;
+    name;
     constructor(name,age){
        this.name = name;
-       this.age = age;
+       this.#age = age;
     }
 
     get personage(){
@@ -37,6 +39,10 @@ class PersonES6 {
     }
     set personage(num){
         this.age = num
+    }
+
+    static getname(){
+        return "static method "
     }
 
 }
@@ -50,7 +56,7 @@ class ChildPersonES6 extends PersonES6 {
 
 
 const obj3 = new PersonES6("Manav Jha", 30);
-obj3.personage = 40
-console.log(obj3)
+console.log(obj3.age)
+console.log(PersonES6.getname())
 const obj4 = new ChildPersonES6("Keshav Jha", 30, "keshav@gmail.com")
 console.log(obj4)

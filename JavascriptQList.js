@@ -95,10 +95,16 @@ function abc(){
 console.log(Register(abc))
 
 function checkPromise (){
+   try {
     return new Promise( (resolve,reject) => {
-       resolve("promise Resolved !")
-    })
+        reject("promise rejected !")
+     })
+   } catch (error) {
+    console.log("Msg",error)
+   } finally {
+    console.log("Finally get called")
+   }
 }
 
-console.log(checkPromise().then( (data) => console.log('hhhh',data )))
+console.log(checkPromise())
 

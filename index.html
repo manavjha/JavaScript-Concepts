@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
     <title>Document</title>
 </head>
 <body id="body">
@@ -26,8 +27,32 @@
 
         </div>
       </main>
+      <section class="container">
+        <div class="circle"></div>
+        <div>
+            <button id="red">Red</button>
+            <button id="yellow">Yellow</button>
+            <button id="green">Green</button>
+        </div>
+        <p>Colorify Project: <strong><i>Red, Green, Yellow</i></strong></p>
+      </section>
+      <section>
+        <input type="search" placeholder="enter name" >
+      </section>
+      <section class="wrapper">
+        <div class="wrapper__list">
+          <div class="wrapper__list--item">1</div>
+          <div class="wrapper__list--item">2</div>
+          <div class="wrapper__list--item">3</div>
+        </div>
+      </section>
 </body>
-<script src="script-5.js" ></script>
-<script src="JavascriptQList-N.js"></script>
-<script src="ObjectsMethods.js"></script>
+<script type="text/javascript">
+    window.onbeforeunload = function() {
+        return "Did you save your stuff?"
+    }
+    window.onbeforeunload = () => "alert"
+  </script>
+<script src="Practice.js" ></script>
+<script type="module" src="axios_30-5.js"></script>
 </html>
