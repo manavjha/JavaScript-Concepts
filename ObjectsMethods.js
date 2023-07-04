@@ -9,9 +9,7 @@ let obj = {
 let copyObj = JSON.parse(JSON.stringify(obj))
 obj.name = "keshav"
 console.log(copyObj)
-obj
-copyObj
-
+ 
 //shallow copy
 
 let copyobj2 = { ...obj }
@@ -29,7 +27,7 @@ console.log(str[0])
 function A(inc) {
     let count = 5
     function B(val) {
-        return setTimeout(() => count + val + inc, 2000)
+        return count + val + inc + 2000
     }
     return B;
 }
@@ -66,7 +64,7 @@ console.log(Object.hasOwn(object1,"property1"))
 
 const url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
 const urlarry =url.split("/en-US/")
-urlarry
+console.log(urlarry)
 
 function PrimeCheck(num,limit){
     const upto = Math.floor(Math.random()*limit)
@@ -81,5 +79,18 @@ function PrimeCheck(num,limit){
     }
     
 }
-console.log(PrimeCheck(37,100))
+console.log(PrimeCheck(36,100))
 
+const primechekfunck = (num,limit) => {
+    if(num ==1){
+        return "not prime"
+    }
+  for(let i=2;i<limit;i++){
+      if(num % i == 0){
+        return "not prime"
+      }
+    return "prime"
+  }
+}
+
+console.log(primechekfunck(3,50))

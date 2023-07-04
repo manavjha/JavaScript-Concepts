@@ -400,3 +400,64 @@ for ( const [key,value] of Object.entries(finalStrCount)){
 
     }
 
+const nums1 = [1,2,2,4,5,5,6,1,6,6,6,6,6,6];
+
+const unique = nums1.reduce( (all,item) => {
+    if(all[item]){
+        all[item] = all[item] + 1
+    } else {
+        all[item] = 1 
+    }
+    return all
+},{})
+
+const unique1 = nums1.filter( (num,i,arr) => arr.indexOf(num) !==i)
+
+console.log(unique1)
+
+console.log(unique)
+// second largest value
+const nummax = [25,10,5,45,15]
+const sorted = nummax.sort(function(a, b){return a-b});
+console.log(sorted)
+const max = sorted.reduce( ( all,item) => all > item ? all :item)
+
+const indexmax = sorted[sorted.length - 2]
+console.log(indexmax)
+console.log(max)
+
+// Algo with space and time complexity with min iteration
+ let newArr = [1,23,12,9,30,2,50]
+ let k = 3 // print 3 largest number from given array ( array may be not sorted )
+
+ const sortedArr3 = newArr.sort( (a,b) => b - a)
+console.log(sortedArr3)
+
+ const sortednewArr = newArr.sort( (a,b) => a - b);
+ console.log(sortednewArr[sortednewArr.length-2])
+
+ function getanylargestNum(arr, size)  {
+
+   // if(Array.isArray(arr)){
+        const sortedArr = arr.sort( (a,b) => b - a)
+        console.log(sortedArr)
+        for( let i=0 ; i< size ; i++){
+            console.log(sortedArr[i])
+        }
+   // }
+   // return sortedArr
+
+ }
+console.log(getanylargestNum(newArr,2))
+ getanylargestNum(newArr,3)
+
+ // get second largest number from given array
+ // i/p: [2,3,6,6,5] ; o/p:5
+ let unsortedarr = [2,3,6,6,5]
+ let uniquearr = [...new Set(unsortedarr)]
+ let sortedArr1 = uniquearr.sort( (a,b) => a -b)
+ // now thw second largest is:
+ console.log(sortedArr1[sortedArr1.length-2])
+
+ // hackerRank code challenge - 
+ // https://www.hackerrank.com/challenges/js10-binary-calculator?isFullScreen=true&hr_b=1

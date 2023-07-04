@@ -7,6 +7,7 @@ let arr1 = [];
 for (let i = 0; i < borad2d.length; i++) {
     if(Array.isArray(borad2d[i])){
         arr1 = arr1.concat(borad2d[i])
+        console.log(arr)
     } else {
         arr1.push(borad2d[i])
     }

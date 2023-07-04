@@ -10,11 +10,46 @@ const getApi = async() => {
 
 const res = await getApi()
 
+const dat = apiData.map( d => {
+ // const res = fetch(d.films).then( t => console.log(t))
+const r = d.films
+const y = r.map( x => {
+  fetch(x).then(z => console.log(z))
+})
+ return y
+})
 
+console.log(dat)
+
+console.log(apiData)
 console.log(res)
 
+// updated correct code for SWAPI (Sapient)
 
+ const url1 = "https://swapi.dev/api/people/";
+//let apiData1 = null;
 
+const getApi1 = async () => {
+  const response = await fetch(url1);
+  const response1 = await response.json();
+  const data = response1.results;
+  const films = data.map( f => {
+    console.log(f.films)
+    f.films.map( film => {
+      fetch(film).then( d => d.json()).then( t => console.log(t))
+    })
+  })
+  // apiData1 = data;
+  return films;
+};
+
+getApi1()
+  .then((data) => {
+    console.log(data); // Do something with the fetched data
+  })
+  .catch((error) => {
+    console.error(error); // Handle any errors that occurred during the API request
+  });
 
 
 

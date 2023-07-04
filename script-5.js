@@ -21,7 +21,7 @@ const Palindrome = (str) => {
       } else {
         return "Not palindrome"
       }
-   }
+   } 
    
 }
 

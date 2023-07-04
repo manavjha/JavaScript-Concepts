@@ -5,7 +5,7 @@ copyOfPersons[0].name ="Doll";
 //persons
 
 
-Array.prototype.includes = null
+Array.prototype.Counter = null
 
 //if(!Array.prototype.includes){
     Array.prototype.myincludes = function(val){
@@ -14,25 +14,37 @@ Array.prototype.includes = null
         if(val !=="" || val=="undefined"){
             for( let i=0;i<this.length;i++){
                 if(this[i]==val){
-                   return 1
+                    console.log(this[i])
+                   return true
                 } else {
-                    return -1
+                    console.log(this[i])
+                    return false
                 }
            }
         }
+
+        
         
     }
 //}
 
-const numbers = [3,4,5,6,7,2]
-const a = numbers.reduce( (prev,cur) => prev > cur ? prev : cur)
 
+const numbers = [3,4,5,6,7,2]
+console.log(numbers.myincludes(5))
+const a = numbers.reduce( (prev,cur) => prev > cur ? prev : cur)
+let sum =0;
+for (let i=0;i<numbers.length;i++){
+    for ( let j=i+1;j<numbers.length -1;j++){
+        sum += numbers[i]
+    }
+}
+console.log(sum)
 // 1st Method
 const b =Math.max.apply(null,numbers)
 
 numbers.splice(numbers.indexOf(b),1)
-const c =Math.max.apply(null,numbers)
-c
+const c1 =Math.max.apply(null,numbers)
+c1
 console.log(b)
 
 // 2st Method
@@ -53,4 +65,41 @@ const xx = aa.find((x) => x ==8 )
 
 const bb = xx? xx:"error"
 bb
+
+// Dynamic Programming - Coin problem
+
+function getWays(n, c) { 
+    let dp = Array.from({length: c.length + 1}, () => Array(n+1).fill(0));
+    
+    
+    for (let i = 0; i < c.length + 1; i++){
+        dp[i][0] = 1;
+    }
+    
+    for (let i = 1; i < c.length + 1; i++){
+        for (let j = 1; j < n + 1; j++){
+            if (j < c[i-1]){
+                dp[i][j] = dp[i-1][j];
+            } else {
+                dp[i][j] = dp[i-1][j] + dp[i][j - c[i-1]];
+            }
+        }
+    }
+
+    return dp[c.length][n];
+
+}
+
+let n = 3
+let c = [8,3,1,2]
+
+console.log(getWays(3,[8,3,1,2]))
+
+//const dp = Array.from({length:c.length+1}, () => Array(n+1).fill(0))
+
+
+    
+
+
+
 
