@@ -1,6 +1,6 @@
 /**
  * 1) Object Oriented Programming - OOJS - Done
- * 2) SOLID Design Principle - TBD
+ * 2) SOLID Design Principle - Done
  * 3) Inheritance and Prototype Chain. - Done
  * 4) Asynchornous Programming [Promises, Async, Await, Execution Stack, Message Queues] - Partially done
  * 5) HOF, HOC - TBR
