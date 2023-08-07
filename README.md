@@ -3,4 +3,4 @@
 # HOF of Arrays and Objects
 # Examples
 # Promises
-# Polyfill function for not supported function
+# Polyfill function for not supported vendor

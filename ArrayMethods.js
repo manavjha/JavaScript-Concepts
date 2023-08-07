@@ -21,9 +21,7 @@ Array.prototype.Counter = null
                     return false
                 }
            }
-        }
-
-        
+        }      
         
     }
 //}
@@ -96,10 +94,18 @@ let c = [8,3,1,2]
 console.log(getWays(3,[8,3,1,2]))
 
 //const dp = Array.from({length:c.length+1}, () => Array(n+1).fill(0))
+/**
+1. Write a JavaScript function to check whether an `input` is an array or not.
+Test Data : console.log(is_array('w3resource'));
+console.log(is_array([1, 2, 4, 0]));
+*/
+const is_Array = arr => Array.isArray(arr) ? true : false;
+console.log(is_Array('w3resource'))
+// Write a simple JavaScript program to join all elements of the following array into a string.
+const myColor = ["Red", "Green", "White", "Black"];
+console.log(myColor.join(',').toString());
+// Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. 
+// For example if you accept 025468 the output should be 0-254-6-8.
 
-
-    
-
-
-
+//console.log(dashInsert(12345))
 

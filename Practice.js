@@ -29,10 +29,10 @@ function sort(a,b){
 
 // object attribute alias
 const objTest = {
-    age :35
+    x :35
 }
 
-const {age:myage} = objTest
+const {x:myage} = objTest
 console.log(myage)
 
 const objOfMatches = (arr1,arr2,call) => {
@@ -75,6 +75,17 @@ input.addEventListener("input", () => {
     console.log("data");
   });
 }); */
+
+//import data from "./products.json"
+
+const getProducts = async() => {
+   const response = await fetch("./products.json");
+   const result = await response.json();
+   return await result
+}
+
+console.log(getProducts().then(() => {console.log("first")}))
+
 let products =[]
 const fetdata = async () => {
    const response = await fetch("data.json");
@@ -346,10 +357,11 @@ console.log(filterItem)
 
 const prices= items.map(item => item.price)
 const totalPrice = prices.reduce( (all,item) => all +item,0)
-console.log(prices)
+console.log(prices) 
 
 const str = "AAABBCCCDDDDFF"
 const strArry = [...str]
+console.log(strArry)
 
 function countCharacters(char, string) {
     return string.split('').reduce((acc, ch) => ch === char ? acc + 1: acc, 0)
@@ -441,14 +453,14 @@ console.log(sortedArr3)
    // if(Array.isArray(arr)){
         const sortedArr = arr.sort( (a,b) => b - a)
         console.log(sortedArr)
-        for( let i=0 ; i< size ; i++){
+        for( let i=0 ; i< 3 ; i++){
             console.log(sortedArr[i])
         }
    // }
    // return sortedArr
 
  }
-console.log(getanylargestNum(newArr,2))
+console.log(getanylargestNum(sortedArr3,2))
  getanylargestNum(newArr,3)
 
  // get second largest number from given array
@@ -459,5 +471,22 @@ console.log(getanylargestNum(newArr,2))
  // now thw second largest is:
  console.log(sortedArr1[sortedArr1.length-2])
 
+
  // hackerRank code challenge - 
  // https://www.hackerrank.com/challenges/js10-binary-calculator?isFullScreen=true&hr_b=1
+
+ // longest string from array
+
+ const longest = (...string) => {
+  let len =0;
+  let longeststr;
+  for (let i = 0; i < string.length; i++) { 
+    if(string[i].length > len){
+      len = string[i].length;
+      longeststr = string[i];
+    } 
+  }
+  return longeststr;
+ }
+
+ console.log(longest('manu','basudha nand jha','keshav','keshavjha')) 

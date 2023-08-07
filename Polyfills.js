@@ -61,6 +61,18 @@ Array.prototype.reduce = null;
       }
 //}
 
+Array.prototype.myreduce = function(cb,initialval){
+  var acuum = initialval;
+  for( let i=0;i<this.length;i++){
+    if(acuum !== 'undefined'){
+      acuum = cb(acuum,this[i],i,this)
+    } else {
+      acuum = this[i]
+    }
+  }
+  return acuum
+}
+
 const arr5 = [1,2,3,4,5];
 
 const result5 = arr5.myReduce( (a,b) => a+b)

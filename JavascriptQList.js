@@ -27,7 +27,7 @@ const prom1 = promise
            .then( (val) => console.log("promise fulfilled", val))
            .catch( (err) => console.log("promise rejected", err))
 
-console.log(prom1)
+console.log(prom1.catch(() => console.log("first")))
 
 class Personc {
     constructor(name){
@@ -108,3 +108,4 @@ function checkPromise (){
 
 console.log(checkPromise())
 
+ 

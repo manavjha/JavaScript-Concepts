@@ -152,4 +152,26 @@ const {amount} = item
 },{"amount":0})
 
 console.log(resultData)
-   const Stack = new Stack()
+ //  const Stack = new Stack()
+// Missing number from Array
+
+const arrunsorted = [8, 9, 4, 5, 11, 13, 14, 18, 17, 16, 16, 9]
+
+const sortedarray1 = [...new Set(arrunsorted)]
+
+const arr11 = sortedarray1.sort( (a,b ) => a -b)
+
+console.log(sortedarray1)
+
+let output = []
+
+let firstVal = arr11[0]
+let lastValue = arr11[arr11.length -1]
+
+for( let j =firstVal; j<lastValue; j++){
+    if(!arr11.includes(j)){
+    output.push(j)
+    }
+}
+
+console.log(output)
