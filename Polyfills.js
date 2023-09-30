@@ -15,7 +15,7 @@ if(!String.prototype.includes){
        return false
     }
 }
-
+// word, const words = this.split(' ');
 
 const sentence = "The quick brown fox jumps over the lazy dog"
 const word = sentence.includes("fox");
@@ -60,6 +60,18 @@ Array.prototype.reduce = null;
         return accumulator;
       }
 //}
+
+Array.prototype.reduce = function(callbackFn,initialValue){
+let accumulator = initialValue
+  for (let i = 0; i < this.length;i++){
+     if(accumulator !== undefined){
+       accumulator= callbackFn(accumulator, this[i], i, this);
+     }else {
+       accumulator = this[i];
+     }
+     return accumulator
+  }
+}
 
 Array.prototype.myreduce = function(cb,initialval){
   var acuum = initialval;
@@ -158,7 +170,6 @@ const s = "maaaanu";
     return output;
 }
 console.log(palindrome(s))*/
-
 
 
 

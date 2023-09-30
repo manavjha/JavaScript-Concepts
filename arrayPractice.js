@@ -161,6 +161,8 @@ const sortedarray1 = [...new Set(arrunsorted)]
 
 const arr11 = sortedarray1.sort( (a,b ) => a -b)
 
+const xxxx = sortedarray1.sort( (a,b) => a-b)
+
 console.log(sortedarray1)
 
 let output = []

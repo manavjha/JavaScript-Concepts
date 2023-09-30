@@ -109,3 +109,33 @@ console.log(myColor.join(',').toString());
 
 //console.log(dashInsert(12345))
 
+const str = "aaddbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+const x = [...str]
+console.log(x);
+
+const x1 = x.reduce((all,item) => { 
+
+if(all[item]){
+    all[item] = all[item] + 1;
+}
+else {
+    all[item] = 1;
+}
+
+return all;
+
+}, {})
+
+console.log(x1)
+
+const result = arr.reduce( (all,item) => {
+    if(all[item]){
+        all[item] = all[item] + 1
+    } else {
+        all[item] = 1
+    }
+    return all
+    },{})
+
+
