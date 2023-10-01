@@ -35,3 +35,4 @@ class SuperEmployee extends Employee {
 const super1 = new SuperEmployee('emp', 30,'emp@gmail.com','temp','Delhi')
 console.log(super1.developer())
 
+// Prototypingsd
