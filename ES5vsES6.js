@@ -35,4 +35,12 @@ class Elemployee extends Employee {
 const emp = new Elemployee('manu', 32, 2)
 console.log(emp)
 
+const obj = [{ name: 'manu', age:20},{ name: 'manu', age:30},{ name: 'keshav', age:10}]
+//const [keys,values] = Object.entries(obj)
+
+for( const [key,value] of Object.entries(obj)){
+console.log(`${key}: ${JSON.stringify(value)}`)
+}
+//console.log(values)
+
 
