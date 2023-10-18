@@ -37,7 +37,7 @@ Create a login form(username,password), display some message after form submissi
 - after that he told me to move the input field from the login component.
 - then create a hoc file, make those input fields serves from hoc.
 
-find a most repeated number in an array and return that count using javascript.
+find a most repeated number in an array and return that count using javascript.--Done
 
 
 How it will look a normal HTML if its open in mobile. 
@@ -47,11 +47,12 @@ In we container should be 50% 50%. But in mobile 100% 100% how to achieve this.
 Code Test: 
 Write a react component to get data from API and list it. (https://dummyjson.com/products) 
 Place a text box with search button. If user search data needs to be filter 
-Each product will have add to cart button. If the user click on it we need to show discount price what we getting from the API. 
+Each product will have add to cart button. 
+If the user click on it we need to show discount price what we getting from the API. 
 
 
 Scenario based question (how to listen to scroll event)
-Program:
+Program:  --- Done
 input: const inventory=['sticky_notes', 'pencil', 'eraser', 'sticky_notes', 'pen', 'pencil', 'sticky_notes'];
 output: const inventory=['pencil_2', 'eraser_1', 'sticky_notes_3', 'pen_1'];
 

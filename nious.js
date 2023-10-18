@@ -61,7 +61,7 @@ bankAccount.withdraw(1000)
 
 console.log(bankAccount.withdraw(6000))
 
-
+// Polyfill function for map
 Array.prototype.map = null;
 
 if(!Array.prototype.map){
