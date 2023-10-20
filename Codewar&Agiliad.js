@@ -99,3 +99,55 @@ const LikesCoun = (arrys) => {
   
   console.log(addDashBetweenEven('025468')); // '0-254-6-8'
   //console.log(addDashBetweenEven('123546')); // '12354-6'
+  
+  // function currying and promise  solution
+  const add = (a) => (b) => b ? add(a + b) : a;
+
+function add1(a) {
+  return function (b) {
+    return b ? add1(a + b) : a;
+  };
+}
+console.log(add(5)(5)(5)());
+//cofeee.io
+const MaxSum = (arr, k) => arr.slice(k).reduce((all, item) => all + item);
+const BAA = [1, 4, 0, 10, 20, 30, 40, 50];
+console.log('MaxSum', MaxSum(BAA, 3));
+const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+
+const obj2 = { name: 'manu' };
+console.log(JSON.parse(JSON.stringify(obj2)) == obj2);
+
+const getData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // reject('get rejected')
+      resolve({ id: 1, name: 'manu', age: 35 });
+    }, 500);
+  });
+};
+
+const getDataById = (id) => {
+  if (id === 1) {
+    return new Promise((resolve, reject) => {
+      //  reject('Error')
+      resolve([
+        { Organization: 'EY', Data: 'Fox1', Technology: 'Front End' },
+        {
+          Organization: 'Apple',
+          Data: 'Fox Dog',
+          Technology: 'Lead Front End',
+        },
+      ]);
+    });
+  }
+};
+// call the function with then and catch.
+getData()
+  .then((data) => {
+    return getDataById(data.id);
+  })
+  .then((dat) => console.log(dat))
+  .catch((err) => console.log(err));
